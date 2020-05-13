@@ -1,0 +1,62 @@
+# This is an example of a deployment - a declaration of pods.
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "vegetable-api-be"
+  labels:
+    app: "vegetable-api-be"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "vegetable-api-be"
+  template:
+    metadata:
+      labels:
+        app: "vegetable-api-be"
+      annotations:
+        update: "vegetable-api-be"
+    spec:
+      containers:
+        - image: "325571649150.dkr.ecr.ap-southeast-2.amazonaws.com/vegetable-api-be:latest"
+          name: vegetable-api-be
+          ports:
+            - containerPort: 3001
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    prometheus.io/scrape: "true"
+  labels:
+    app: "vegetable-api-be"
+  name: "vegetable-api-be-service"
+spec:
+  ports:
+    - port: 3001
+      targetPort: 3001
+  selector:
+    app: "vegetable-api-be"
+
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    "kubernetes.io/tls-acme": "true"
+  name: "vegetable-api-be-ingress"
+spec:
+  rules:
+    - host: "vegetable-api-be.svc.platform.myobdev.com"
+      http:
+        paths:
+          - backend:
+              serviceName: "vegetable-api-be-service"
+              servicePort: 3001
+            path: /
+  tls:
+    - hosts:
+        - "vegetable-api-be.svc.platform.myobdev.com"
+      secretName: "vegetable-api-be-tls"
