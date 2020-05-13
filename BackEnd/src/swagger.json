@@ -1,0 +1,51 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Vegetable API",
+        "description": "A Vegetable API for Veggie Patch"
+    },
+    "schemes": [
+        "https"
+    ],
+    "basePath": "/openapi101",
+    "paths": {
+        "/v1/veggies": {
+            "get": {
+                "summary": "Gets List of vegetables",
+                "description": "Returns a list containing all known vegetables.",
+                "responses": {
+                    "200": {
+                        "description": "A list of vegetables",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "urlToImage": {
+                                        "type": "string"
+                                    },
+                                    "details": {
+                                        "type": "array",
+                                        "items": {
+                                          "properties": {
+                                            "title": {
+                                              "type": "string"
+                                            },
+                                            "desc": {
+                                                "type": "string"
+                                            }
+                                          }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

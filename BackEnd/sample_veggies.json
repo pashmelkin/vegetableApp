@@ -1,0 +1,117 @@
+{
+    "veggies":
+    [
+        {
+            "name": "Carrot",
+            "urlToImage": "https://our-veggie-patch-images.s3-ap-southeast-2.amazonaws.com/carrot.jpg",
+            "details" : [
+                {
+                    "title": "Botanical Name",
+                    "desc": "Daucus carota"
+                },
+                {
+                    "title": "How To Grow",
+                    "desc": "Sow thinly, 6mm deep in rows 30cm apart. Keep moist. Repeat every two weeks for continuous crops. Thin out to 10cm apart and water well to replace any soil dislodged from roots."
+                },
+                {
+                    "title": "When To Plant",
+                    "desc": "Winter through to Autumn"
+                },
+                {
+                    "title": "Harvest",
+                    "desc": "Throughout the year as required"
+                },
+                {
+                    "title": "Sow",
+                    "desc": "Spring, Summer, Autumn, Winter"
+                },
+                {
+                    "title": "Soil Type",
+                    "desc": "Well cultivated, well drained, sunny position"
+                },
+                {
+                    "title": "Notes",
+                    "desc": "Soil should be lacking in nutrient; too much nutrients particularly nitrogen will result in forked carrots"
+                }
+            ]
+        },
+        {
+            "name": "Tomato Roma",
+            "urlToImage": "https://our-veggie-patch-images.s3-ap-southeast-2.amazonaws.com/tomato_roma.jpg",
+            "details": [
+                {
+                    "title": "Botanical Name",
+                    "desc": "Solanum lycopersicum"
+                },
+                {
+                    "title": "How To Grow",
+                    "desc": "Sow Spring to early Summer – all year round in frost free warm areas. Sow 5mm deep in pots or trays of seed raising mix. Transplant to 10-15cm pots in a warm, sunny spot. Transfer to final fruiting position when sturdy enough. Space plants 75cm apart each way. Water daily, and when the first truss has set, feed regularly. Pinch out the side shoots as they appear. Can also be sown direct in final position, especially your late crop. Seedlings emerge 10-14 days"
+                },
+                {
+                    "title": "When To Plant",
+                    "desc": "Early Spring to Summer"
+                },
+                {
+                    "title": "Harvest",
+                    "desc": "14-16 weeks"
+                },
+                {
+                    "title": "Sow",
+                    "desc": "Spring, Summer"
+                }
+            ]
+        },
+        {
+            "name": "Cucumber",
+            "urlToImage": "https://our-veggie-patch-images.s3-ap-southeast-2.amazonaws.com/cucumber.jpg",
+            "details": [
+                {
+                    "title": "Botanical Name",
+                    "desc": "Cucumis sativus"
+                },
+                {
+                    "title": "How To Grow",
+                    "desc": "Sow 12mm deep, direct in final position. Sow 4-5 seeds in clumps, later thin to two strongest seedlings. Allow 100cm between rows and 40-50cm between clumps. At 5 or 6 leaves pinch out the growing tips to encourage side shoots. Keep well watered and prepare the soil with organic material and or complete fertiliser."
+                },
+                {
+                    "title": "When To Plant",
+                    "desc": "Spring to Summer"
+                },
+                {
+                    "title": "Harvest",
+                    "desc": "8-10 weeks"
+                },
+                {
+                    "title": "Sow",
+                    "desc": "Spring, Summer"
+                }
+            ]
+        },
+        {
+            "name": "Lettuce Iceberg",
+            "urlToImage": "https://our-veggie-patch-images.s3-ap-southeast-2.amazonaws.com/lettuce_iceberg.jpg",
+            "details": [
+                {
+                    "title": "Botanical Name",
+                    "desc": "Lactuca sativa"
+                },
+                {
+                    "title": "How To Grow",
+                    "desc": "Sow indoors from mid Winter or directly in the garden after danger of frost has passed, and again after Summer heat has eased. Prefers cooler growing conditions as heat can cause the plant to bolt. Sow seed 5mm deep into well prepared soil. Water regularly and apply liquid fertiliser every two weeks to promote quick growth. Seedlings emerge 7-10 days."
+                },
+                {
+                    "title": "When To Plant",
+                    "desc": "Spring to Autumn"
+                },
+                {
+                    "title": "Harvest",
+                    "desc": "10-12 weeks"
+                },
+                {
+                    "title": "Sow",
+                    "desc": "Spring, Autumn"
+                }
+            ]
+        }
+    ]
+}

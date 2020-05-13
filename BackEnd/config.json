@@ -1,0 +1,7 @@
+{
+  "express" :
+  {
+    "port": 3001
+  },
+   "connectionString" : "./sample_veggies.json"
+}
