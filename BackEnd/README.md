@@ -16,3 +16,4 @@ Solition decisions:
     Swagger Editor: https://editor.swagger.io
 5. Code Coverage:
     https://istanbul.js.org
+6.  After you run it , go to 'localhost:3001/v1/veggies'
