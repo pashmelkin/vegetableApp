@@ -23,12 +23,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - run: cd FrontEnd
       - run: yarn install
       - run: cd FrontEnd
       - name: Run unit tests
         id: unittests
-        run: yarn test
+        run: cd FrontEnd; yarn test
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.unittests.outputs.time }}"
