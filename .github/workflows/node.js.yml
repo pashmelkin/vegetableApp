@@ -20,12 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          file-name: FrontEnd/package.json
           node-version: ${{ matrix.node }}
       - run: cd FrontEnd
       - run: yarn install
+      - run: cd FrontEnd
       - name: Run unit tests
         id: unittests
         run: yarn test
