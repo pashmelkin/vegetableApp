@@ -22,11 +22,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup node
         uses: actions/setup-node@v1
-          with:
-            file-name: FrontEnd/package.json
+        with:
+          file-name: FrontEnd/package.json
+          node-version: ${{ matrix.node }}
       - run: yarn test
-         with:
-            file-name: FrontEnd/package.json
+        with:
+          file-name: FrontEnd/package.json
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.unittests.outputs.time }}"
