@@ -23,8 +23,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - run: yarn install
-      - run: cd FrontEnd
+      - run: cd FrontEnd; yarn install
       - name: Run unit tests
         id: unittests
         run: cd FrontEnd; yarn test
