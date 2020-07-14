@@ -15,7 +15,6 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x]
-    name: Build the code
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -23,7 +22,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - run: cd FrontEnd; yarn install
+      - name: Install dependencies
+        run: cd FrontEnd; yarn install
       - name: Run unit tests
         id: unittests
         run: cd FrontEnd; yarn test
