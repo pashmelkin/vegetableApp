@@ -25,7 +25,8 @@ jobs:
         with:
           file-name: FrontEnd/package.json
           node-version: ${{ matrix.node }}
-      - run: yarn test
+      - name: Run unit tests
+        run: cd FrontEnd; yarn test
         with:
           file-name: FrontEnd/package.json
       # Use the output from the `hello` step
