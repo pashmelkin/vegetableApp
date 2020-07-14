@@ -19,10 +19,14 @@ jobs:
     steps:
       - name: Run unit tests
         id: unittests
-        with:
-          node-version: ${{ matrix.node-version }}
-          file-name: FrontEnd/package.json
-        run: yarn test
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+          with:
+            node-version: ${{ matrix.node-version }}
+            file-name: FrontEnd/package.json
+      - run: yarn test
+         with:
+            file-name: FrontEnd/package.json
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.unittests.outputs.time }}"
