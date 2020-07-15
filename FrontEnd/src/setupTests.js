@@ -11,4 +11,3 @@ import React from "react"
 configure({ adapter: new Adapter() });
 
 React.useLayoutEffect = React.useEffect
-
