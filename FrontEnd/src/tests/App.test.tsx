@@ -5,7 +5,6 @@ import App from '../App';
 import * as React from "react";
 
 describe('App', () => {
-
     it('is as expected', () => {
             const app = App();
             expect(app).to.not.be.null;;
