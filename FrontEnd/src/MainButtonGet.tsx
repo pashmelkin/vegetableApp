@@ -1,5 +1,4 @@
 import Button from '@material-ui/core/Button';
-import './App.css';
 import {ApiCall} from './utils/ApiCall';
 import React from "react";
 import config from './config.json';

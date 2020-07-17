@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import MainButtonGet from './MainButtonGet.js';
+import MainButtonGet from './MainButtonGet';
 
 ReactDOM.render(<MainButtonGet />, document.getElementById('root'));
