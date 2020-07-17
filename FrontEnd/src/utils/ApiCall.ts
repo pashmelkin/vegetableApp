@@ -1,5 +1,7 @@
-export function ApiCall() {
-    fetch('http://localhost:3001/v1/veggies')
+export function ApiCall( config: { url: string; port: string; route: string; }) {
+    const  apiUrl = config.url + (config.port ==="" ? "" : ":" + config.port ) + "/" +  config.route;
+    fetch(apiUrl)
         .then(response => response.json())
-        .then(data => console.log(data));
+        .then(data => console.log(data))
+        .catch(() => console.log("Can’t access  response from " + apiUrl))
 }
