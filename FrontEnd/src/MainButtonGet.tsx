@@ -4,7 +4,7 @@ import {ApiCall} from './utils/ApiCall';
 import React from "react";
 import config from './config.json';
 
-export default function App() {
+export default function MainButtonGet( ) {
   const vegeConfig = config.VegetableApi;
     return (
         <Button variant="contained" color="primary" onClick={ () => { ApiCall(vegeConfig)} }>
