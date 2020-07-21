@@ -1,16 +1,16 @@
 import { expect } from 'chai';
 import { render } from 'enzyme';
 
-import App from '../App';
+import VegetablesList from '../VegetablesList';
 import * as React from "react";
 
-describe('App', () => {
+describe('MainButtonGet', () => {
     it('is as expected', () => {
-            const app = App();
+            const app = VegetablesList();
             expect(app).to.not.be.null;;
         });
     it('renders the title', () => {
-        const wrapper = render(<App />);
+        const wrapper = render(<VegetablesList />);
         expect(wrapper.text()).to.contain('Get Vegetables');
     });
     });
