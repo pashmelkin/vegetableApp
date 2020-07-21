@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainButtonGet from './MainButtonGet';
+import VegetablesList from './VegetablesList';
 
-ReactDOM.render(<MainButtonGet />, document.getElementById('root'));
+ReactDOM.render(<VegetablesList />, document.getElementById('root'));
