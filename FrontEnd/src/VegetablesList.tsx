@@ -1,5 +1,5 @@
 import {ApiCallAsync} from './utils/ApiCallAsync';
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import config from './config.json';
 import {IVegetable} from './model/IVegetable';
 
@@ -7,7 +7,7 @@ export  default function VegetablesList() {
     const [items, setItems] = useState<IVegetable[]>([]);
 
 
-    useEffect( () => {
+    React.useEffect( () => {
         const apiConfig = config.PokemonApi;
         async function GetItems (config: { url: string; port: string; route: string; }) {
 
