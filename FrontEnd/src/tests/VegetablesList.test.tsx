@@ -1,16 +1,35 @@
-import { expect } from 'chai';
-import { render } from 'enzyme';
-
 import VegetablesList from '../VegetablesList';
-import * as React from "react";
+import React from "react";
+import { shallow } from 'enzyme';
 
-describe('MainButtonGet', () => {
-    it('is as expected', () => {
-            const app = VegetablesList();
-            expect(app).to.not.be.null;;
+
+describe('VegetablesList', () => {
+    let wrapper;
+    let useEffect;
+    let getItemsMock;
+    const items = [{name : "paul"}, {name : "Mark"}];
+
+    const mockUseEffect = () => {
+        useEffect.mockImplementationOnce(f => f());
+    };
+
+    beforeEach(() => {
+        useEffect = jest.spyOn(React, "useEffect");
+        mockUseEffect();
+
+       // getItemsMock = jest.spyOn(VegetablesList, "GetItems");
+      //  getItemsMock.mockReturnValue(items);
+
+        wrapper = shallow(<VegetablesList />);
+    });
+
+    describe("on start", () => {
+        it("loads the items", () => {
+            console.log(wrapper.debug());
         });
-    it('renders the title', () => {
-        const wrapper = render(<VegetablesList />);
-        expect(wrapper.text()).to.contain('Get Vegetables');
+        it("will render ", () => expect(wrapper.find(".mdc-list").length).toEqual(1));
+        it("will call useEffect", () => expect(useEffect).toHaveBeenCalled());
+
     });
-    });
+
+});
