@@ -12,7 +12,6 @@ export  default function VegetablesList() {
     React.useEffect( () => {
         const apiConfig = config.PokemonApi;
 
-
         GetItems(apiConfig);
     }, [])
 
@@ -21,8 +20,7 @@ export  default function VegetablesList() {
             <ul className="mdc-list mdc-list--two-line">
                 {items.map(item =>
                     (
-                      <li key={item.name}>{item.name}</li>
-
+                      <li className={item.name} key={item.name}>{item.name}</li>
                     ))
                 }
             </ul>

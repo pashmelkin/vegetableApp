@@ -1,4 +1,6 @@
 import VegetablesList from '../VegetablesList';
+import * as ApiService from '../utils/ApiCallAsync';
+
 import React from "react";
 import { shallow } from 'enzyme';
 
@@ -6,7 +8,7 @@ import { shallow } from 'enzyme';
 describe('VegetablesList', () => {
     let wrapper;
     let useEffect;
-    let getItemsMock;
+    let apiCallSpy;
     const items = [{name : "paul"}, {name : "Mark"}];
 
     const mockUseEffect = () => {
@@ -17,15 +19,19 @@ describe('VegetablesList', () => {
         useEffect = jest.spyOn(React, "useEffect");
         mockUseEffect();
 
-       // getItemsMock = jest.spyOn(VegetablesList, "GetItems");
-      //  getItemsMock.mockReturnValue(items);
+        apiCallSpy = jest.spyOn(ApiService, 'ApiCallAsync');
+        apiCallSpy.mockReturnValue(items);
 
         wrapper = shallow(<VegetablesList />);
     });
 
     describe("on start", () => {
         it("loads the items", () => {
-            console.log(wrapper.debug());
+            //console.log(wrapper.debug());
+            items.map(item =>
+                expect(wrapper.contains(item.name))
+                )
+
         });
         it("will render ", () => expect(wrapper.find(".mdc-list").length).toEqual(1));
         it("will call useEffect", () => expect(useEffect).toHaveBeenCalled());
