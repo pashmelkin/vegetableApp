@@ -1,2 +1,3 @@
 1. TODO:
-    a. use interfaces
+    a. Add Redux in FrontEnd
+    b. Use Material UI library
