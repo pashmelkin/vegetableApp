@@ -1,7 +1,8 @@
-import {ApiCallAsync} from './utils/ApiCallAsync';
+import {ApiCallAsync} from '../utils/ApiCallAsync';
 import React, {useState} from "react";
-import config from './config.json';
-import {IVegetable} from './model/IVegetable';
+import config from '../config.json';
+import {IVegetable} from '../model/IVegetable';
+import Album from './Album';
 
 export  default function VegetablesList() {
     const [items, setItems] = useState<IVegetable[]>([]);
@@ -17,14 +18,7 @@ export  default function VegetablesList() {
 
 
         return (
-            <ul className="mdc-list mdc-list--two-line">
-                {items.map(item =>
-                    (
-                      <li className={item.name} key={item.name}>{item.name}</li>
-                    ))
-                }
-            </ul>
-
+            <Album/>
 
         );
 }

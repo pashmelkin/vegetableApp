@@ -1,4 +1,4 @@
-import VegetablesList from '../VegetablesList';
+import VegetablesList from '../components/VegetablesList';
 import * as ApiService from '../utils/ApiCallAsync';
 
 import React from "react";
