@@ -2,14 +2,11 @@ import {ApiCallAsync} from '../utils/ApiCallAsync';
 import React, {useState} from "react";
 import config from '../config.json';
 import {IVegetable} from '../model/IVegetable';
-import {Button} from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import CardActions from "@material-ui/core/CardActions";
 import Copyright from "./Copyright";
 
 export  default function VegetablesList() {
