@@ -25,10 +25,9 @@ export  default function VegetablesList() {
         return (
             <React.Fragment>
                 <Container  maxWidth="md">
-                    {/* End hero unit */}
                     <Grid container spacing={4}>
-                        {items.map((item) => (
-                            <Grid item xs={12} sm={6} md={4}>
+                        {items.map((item, value) => (
+                            <Grid item key={value} xs={12} sm={6} md={4}>
                                 <Card >
                                     <CardContent >
                                         <Typography>

@@ -27,14 +27,15 @@ describe('VegetablesList', () => {
 
     describe("on start", () => {
         it("loads the items", () => {
-            //console.log(wrapper.debug());
+            console.log(wrapper.debug());
             items.map(item =>
                 expect(wrapper.contains(item.name))
                 )
 
         });
-        it("will render ", () => expect(wrapper.find(".mdc-list").length).toEqual(1));
+        it("will render ", () => expect(wrapper.find("Fragment").length).toEqual(1));
         it("will call useEffect", () => expect(useEffect).toHaveBeenCalled());
+        it("will render Copyright", () =>  expect(wrapper.find("Copyright").length).toEqual(1));
 
     });
 
